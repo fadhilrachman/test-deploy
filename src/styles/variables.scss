@@ -1,0 +1,35 @@
+//variables
+$font-main: var(--font-inter);
+$font-secondary: var(--font-montserrat);
+$main-color: var(--main-color);
+$yellow-color: var(--yellow-color);
+
+* {
+  font-family: $font-main !important;
+}
+
+.font-secondary {
+  font-family: $font-secondary !important;
+}
+
+.bg {
+  &-main {
+    background: $main-color !important;
+  }
+  &-yellow {
+    background: $yellow-color !important;
+  }
+}
+
+.text {
+  &-main {
+    color: $main-color !important;
+  }
+  &-yellow {
+    color: $yellow-color !important;
+  }
+}
+
+svg {
+  box-shadow: unset !important;
+}
