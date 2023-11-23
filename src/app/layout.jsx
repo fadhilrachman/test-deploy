@@ -3,6 +3,7 @@ import { Montserrat, Inter } from "next/font/google";
 import StyledComponentsRegistry from "../lib/AntdRegistry";
 import NavbarCustom from "@/components/shared/NavbarCustom";
 import "../styles/App.scss";
+import FooterCustom from "@/components/shared/FooterCustom";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -54,6 +55,7 @@ export default function RootLayout({ children }) {
         >
           <NavbarCustom />
           {children}
+          <FooterCustom />
         </body>
       </StyledComponentsRegistry>
     </html>
