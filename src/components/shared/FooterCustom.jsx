@@ -46,37 +46,39 @@ const FooterCustom = () => {
   ];
 
   return (
-    <section className="pt-[100px] pb-[30px]">
+    <section className=" py-[72px]">
       <div className="px-[120px]">
-        <TittleCustom className={"font-bold"}> ESCROW SG</TittleCustom>
+        <p className="text-blue-950 text-2xl font-bold">Escrow SG</p>
 
-        <div className="pt-7 grid grid-cols-4">
+        <div className="pt-12 grid grid-cols-4">
           <div>
-            <p className="text-main font-extrabold mb-1">Company</p>
+            <p className="text-main font-bold ">Company</p>
             {listMenuCompany.map((val) => {
-              return <p className="mt-3 cursor-pointer">{val.name}</p>;
+              return <p className="mt-4 cursor-pointer">{val.name}</p>;
             })}
           </div>
           <div className="col-span-2">
-            <p className="text-main font-extrabold mb-1">Get In Touch</p>
+            <p className="text-main font-bold ">Get In Touch</p>
             {listMenuGetInTouch.map((val) => {
-              return <p className="mt-3 cursor-pointer">{val.name}</p>;
+              return <p className="mt-4 cursor-pointer">{val.name}</p>;
             })}
           </div>
           <div className="flex flex-col items-end">
-            <p className="text-main font-extrabold mb-1">CONNECT WITH US</p>
-            <div className="text-main">
+            <p className="text-main font-extrabold  leading-normal">
+              CONNECT WITH US
+            </p>
+            <div className="text-main space-x-6 mt-4">
               <a href="https://www.instagram.com/">
-                <LinkedinOutlined className="mr-3 text-lg" />
+                <LinkedinOutlined className=" text-lg" />
               </a>
               <a href="https://www.instagram.com/">
-                <FacebookOutlined className="mr-3 text-lg" />
+                <FacebookOutlined className=" text-lg" />
               </a>
               <a href="https://www.instagram.com/">
-                <TwitterOutlined className="mr-3 text-lg" />
+                <TwitterOutlined className=" text-lg" />
               </a>
               <a href="https://www.instagram.com/">
-                <InstagramOutlined className="mr-3 text-lg" />
+                <InstagramOutlined className=" text-lg" />
               </a>
             </div>
           </div>

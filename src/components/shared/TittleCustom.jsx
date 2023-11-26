@@ -1,18 +1,30 @@
 import React from "react";
 
-const TittleCustom = ({ children, className, color = "main", fontSize }) => {
-  const listColor = {
-    gray: "text-[#878D96]",
-    main: "text-main",
-  };
-
-  const listSize = {
-    xl: "text-2xl",
-  };
+const TittleCustom = ({
+  className,
+  title,
+  subTitle,
+  tittleClassName,
+  subTittleClassName,
+}) => {
   return (
-    <p className={`${listColor[color]} ${listSize[fontSize]} ${className}`}>
-      {children}
-    </p>
+    <div className={`${className} space-y-12`}>
+      {title && (
+        <p
+          className={`${tittleClassName} text-neutral-400 font-bold text-base leading-normal`}
+        >
+          {title}
+        </p>
+      )}
+
+      {subTitle && (
+        <div
+          className={`${subTittleClassName} text-main font-secondary   text-4xl font-bold `}
+        >
+          {subTitle}
+        </div>
+      )}
+    </div>
   );
 };
 
