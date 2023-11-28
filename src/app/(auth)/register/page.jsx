@@ -5,7 +5,10 @@ import React from "react";
 
 export default function RegisterPage() {
   return (
-    <AuthProfileLayout title="Create Account" subtitle="">
+    <AuthProfileLayout
+      title="Create Account"
+      // subTitle="xxxx"
+    >
       <RegisterForm />
       <p className="text-base font-semibold text-center text-main mt-6">
         Already have account?{" "}
