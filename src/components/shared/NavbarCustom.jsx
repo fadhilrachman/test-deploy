@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import ButtonCustom from "./ButtonCustom";
 import Link from "next/link";
