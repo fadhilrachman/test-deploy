@@ -28,6 +28,7 @@ const StyledComponentsRegistry = ({ children }) => {
           token: {
             colorPrimary: themeColor.mainColor,
             controlOutline: "none",
+            borderRadius: 6,
             /* here is your global tokens */
           },
         }}

@@ -1,0 +1,47 @@
+//remove arow in input numbers
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.ant-input:focus {
+  outline: 0 !important;
+}
+.ant-form-item-label > label {
+  height: fit-content !important;
+}
+
+//otp input
+.input-otp {
+  input {
+    font-family: $font-secondary !important;
+    font-weight: bold;
+  }
+}
+
+input {
+  width: 100% !important;
+}
+
+.ant-form-item-label {
+  padding-bottom: 2px !important;
+  label {
+    font-size: 14px !important;
+  }
+}
+
+.ant-upload-select {
+  margin-bottom: 0 !important;
+}
+
+.ant-switch-inner {
+  .ant-switch-inner-unchecked & {
+    background: #e3e3e3 !important;
+  }
+}

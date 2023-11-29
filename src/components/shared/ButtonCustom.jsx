@@ -16,7 +16,7 @@ export default function ButtonCustom({
       <Button
         disabled={disabled}
         {...props}
-        className={`bg-main border border-white`}
+        className={`bg-main border border-white ${className} `}
         onClick={onClick}
         style={{ height: height || 36 }}
       >
@@ -28,7 +28,7 @@ export default function ButtonCustom({
       <Button
         {...props}
         disabled={disabled}
-        className={` ${className} ${disabled && "bg-disabled"} `}
+        className={` ${className} ${disabled && "bg-disabled"}`}
         onClick={onClick}
         style={{ height: height || 36 }}
       >

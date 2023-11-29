@@ -12,14 +12,14 @@ export default function AuthProfileLayout({ children, title, subTitle }) {
             className="absolute top-0 left-0"
           />
         </Link>
-        <div className="max-w-[348px] w-full ">
+        <div className="max-w-[360px] w-full ">
           <div className="mb-6">
             <p className="text-4xl font-bold text-main mb-0 font-secondary leading-[52px]">
               {title}
             </p>
-            <p className="text-neutral-400 text-base font-normal font-roboto ">
+            <div className="text-neutral-400 text-xs font-normal font-secondary ">
               {subTitle}
-            </p>
+            </div>
           </div>
           <div className="">{children}</div>
         </div>

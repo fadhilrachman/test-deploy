@@ -367,7 +367,7 @@ export default function FormGenerator({
                 name={res.name}
                 rules={res?.rules}
               >
-                <TextArea />
+                <TextArea placeholder={res?.placeholder} rows={4} />
               </Form.Item>
             );
           }
@@ -383,7 +383,7 @@ export default function FormGenerator({
               >
                 <Upload
                   listType="picture-card"
-                  className="avatar-uploader"
+                  className="avatar-uploader m-0"
                   customRequest={() => {}}
                   showUploadList={false}
                   accept="image/png, image/jpg, image/jpeg"
@@ -405,7 +405,7 @@ export default function FormGenerator({
                       }}
                     />
                   ) : (
-                    <Button>Upload</Button>
+                    <>{res?.icon ? res.icon : <Button>Upload</Button>}</>
                   )}
                   {/* {formRef?.current?.getFieldValue(res.name) ? (
                     <img
