@@ -48,15 +48,16 @@ const ContactForm = () => {
         id="dynamicForm"
         size="large" //small , default , large
         layout="vertical"
-        // formStyle={{ border: "1px solid black" }}
       />
       <div className="flex justify-end">
-        <div className="w-[84px] cursor-pointer h-10 px-6 py-2 bg-blue-950 rounded-md justify-center items-center gap-3 inline-flex">
-          <div className="text-center text-white text-base font-semibold font-['Inter'] leading-normal">
-            Sent
-          </div>
-        </div>
-        {/* <ButtonCustom title="REGISTER" className={"bg-blue-950"} /> */}
+        <ButtonCustom
+          form="dynamicForm"
+          htmlType="submit"
+          title="Sent"
+          className="bg-main w-max mt-6 rounded-md"
+          textClassName="text-white"
+          height={40}
+        />
       </div>
     </div>
   );

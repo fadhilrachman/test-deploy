@@ -1,6 +1,8 @@
 //variables
 $font-main: var(--font-inter);
 $font-secondary: var(--font-montserrat);
+$font-roboto: var(--font-roboto);
+
 $main-color: var(--main-color);
 $yellow-color: var(--yellow-color);
 
@@ -8,8 +10,16 @@ $yellow-color: var(--yellow-color);
   font-family: $font-main !important;
 }
 
+.font-roboto {
+  font-family: $font-roboto !important;
+}
+
 .font-secondary {
   font-family: $font-secondary !important;
+}
+
+.border-main {
+  border-color: $main-color !important;
 }
 
 .bg {
@@ -19,6 +29,9 @@ $yellow-color: var(--yellow-color);
   &-yellow {
     background: $yellow-color !important;
   }
+  &-disabled {
+    background: #dde1e6 !important;
+  }
 }
 
 .text {
@@ -27,6 +40,9 @@ $yellow-color: var(--yellow-color);
   }
   &-yellow {
     color: $yellow-color !important;
+  }
+  &-disabled {
+    color: #878d96 !important;
   }
 }
 

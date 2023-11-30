@@ -1,11 +1,13 @@
 "use client";
 
 import React from "react";
-import { Button, Form } from "antd";
+import { Button, Form, Switch } from "antd";
 import { useRouter } from "next/navigation";
 
 import FormGenerator from "../shared/FormGenerator";
 import { fetcherPOST, fetcherPOSTLocal } from "../../lib/fethcer";
+import ButtonCustom from "../shared/ButtonCustom";
+import Link from "next/link";
 
 export default function LoginForm() {
   const route = useRouter();
@@ -33,7 +35,7 @@ export default function LoginForm() {
       name: "email",
       label: "Email",
       type: "email",
-      placeholder: "Email address",
+      placeholder: "Email",
       rules: [{ required: true, message: "This field is required!" }],
     },
     //PASSWORD
@@ -51,9 +53,11 @@ export default function LoginForm() {
       rules: [
         { required: true, message: "This field is required!" },
         {
-          pattern: new RegExp(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/g),
+          pattern: new RegExp(
+            /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/g
+          ),
           message:
-            "Minimum eight characters, at least one letter and one number",
+            " Minimum eight characters, at least one letter, one number and one special character",
         },
       ],
     },
@@ -68,15 +72,25 @@ export default function LoginForm() {
         size="large" //small , default , large
         layout="vertical" //vertical, horizontal
         // formStyle={{ maxWidth: "100%" }}
+        className="space-y-6"
       />
-      <Button
+      <div className="flex justify-between items-center">
+        <div className="flex space-x-2 items-center">
+          <Switch className="bg-black/20 " onChange={() => {}} />
+          <p className="text-roboto text-neutral-700 text-sm">Remember Me</p>
+        </div>
+        <Link href="/" className="text-sm font-medium text-main">
+          Forgot Password?
+        </Link>
+      </div>
+      <ButtonCustom
         form="dynamicForm"
         htmlType="submit"
-        className="mt-3 bg-blue-500"
-        type="primary"
-      >
-        Submit
-      </Button>
+        title="Sign In"
+        className="bg-main w-full mt-6 rounded-md"
+        textClassName="text-white"
+        height={40}
+      />
     </>
   );
 }

@@ -6,10 +6,13 @@ import Services from "@/components/home/Services";
 import Product from "@/components/home/Product";
 import HowTo from "@/components/home/HowTo";
 import OurPricing from "@/components/home/OurPricing";
+import NavbarCustom from "@/components/shared/NavbarCustom";
+import FooterCustom from "@/components/shared/FooterCustom";
 
 export default function Home() {
   return (
     <main className="home">
+      <NavbarCustom />
       <Jumbotron />
       <OurClient />
       <WhatIs />
@@ -18,6 +21,7 @@ export default function Home() {
       <OurPricing />
       <HowTo />
       <FAQ />
+      <FooterCustom />
     </main>
   );
 }

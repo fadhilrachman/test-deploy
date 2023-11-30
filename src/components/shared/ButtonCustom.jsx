@@ -7,16 +7,39 @@ export default function ButtonCustom({
   className,
   type,
   height,
+  textClassName,
+  disabled,
+  ...props
 }) {
-  const outlineClass = type === "outline" && `bg-main border border-white`;
-  const outlineText = type === "outline" ? `text-white` : "text-main";
-  return (
-    <Button
-      className={` ${className} ${outlineClass}`}
-      onClick={onClick}
-      style={{ height: height || 36 }}
-    >
-      <p className={`text-sm font-semibold ${outlineText} `}>{title}</p>
-    </Button>
-  );
+  if (type === "outline") {
+    return (
+      <Button
+        disabled={disabled}
+        {...props}
+        className={`bg-main border border-white ${className} `}
+        onClick={onClick}
+        style={{ height: height || 36 }}
+      >
+        <p className={`text-sm font-semibold text-white`}>{title}</p>
+      </Button>
+    );
+  } else {
+    return (
+      <Button
+        {...props}
+        disabled={disabled}
+        className={` ${className} ${disabled && "bg-disabled"}`}
+        onClick={onClick}
+        style={{ height: height || 36 }}
+      >
+        <p
+          className={`text-sm font-semibold ${textClassName} ${
+            disabled && "text-disabled"
+          } `}
+        >
+          {title}
+        </p>
+      </Button>
+    );
+  }
 }

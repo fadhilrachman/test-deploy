@@ -1,14 +1,16 @@
-import { cookies } from "next/headers";
-import { Montserrat, Inter } from "next/font/google";
+import { Montserrat, Inter, Roboto } from "next/font/google";
 import StyledComponentsRegistry from "../lib/AntdRegistry";
-import NavbarCustom from "@/components/shared/NavbarCustom";
 import "../styles/App.scss";
-import FooterCustom from "@/components/shared/FooterCustom";
 
 const inter = Inter({
   subsets: ["latin"],
   weight: ["300", "400"],
   variable: "--font-inter",
+});
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["300", "400"],
+  variable: "--font-roboto",
 });
 const fmon = Montserrat({
   subsets: ["latin"],
@@ -50,12 +52,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <StyledComponentsRegistry>
         <body
-          className={`${inter.variable} ${fmon.variable}`}
+          className={`${inter.variable} ${fmon.variable} ${roboto.variable}`}
           style={colorsVariable}
         >
-          <NavbarCustom />
           {children}
-          <FooterCustom />
         </body>
       </StyledComponentsRegistry>
     </html>
