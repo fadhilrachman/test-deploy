@@ -16,7 +16,9 @@ export default function NavbarCustom() {
           </Link>
         </div>
         <div className="flex space-x-4">
-          <ButtonCustom title="SIGN IN" />
+          <Link href={"/auth"}>
+            <ButtonCustom title="SIGN IN" />
+          </Link>
           <ButtonCustom title="REGISTER" type="outline" className="" />
         </div>
       </div>

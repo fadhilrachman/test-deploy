@@ -15,7 +15,7 @@ const Label = ({ children }) => {
 
 const Description = ({ children, className }) => (
   <div
-    className={`${className} space-y-10 mb-5 ml-14 -mt-5  text-base font-semibold`}
+    className={`${className} space-y-10 mb-5 ml-14 -mt-5  text-base font-medium`}
   >
     {children}
   </div>
