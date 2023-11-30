@@ -24,6 +24,14 @@ const StyledComponentsRegistry = ({ children }) => {
               // handleBg: themeColor.mainColor,
               /* here is your component tokens */
             },
+            Menu: {
+              /* here is your component tokens */
+              itemSelectedColor: themeColor.mainColor,
+              itemSelectedBg: "#EFFBFF",
+              itemColor: "#878D96",
+              itemHoverBg: "#EFFBFF",
+              itemActiveBg: "#EFFBFF",
+            },
           },
           token: {
             colorPrimary: themeColor.mainColor,
