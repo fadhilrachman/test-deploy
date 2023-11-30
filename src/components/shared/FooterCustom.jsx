@@ -6,7 +6,9 @@ import {
   InstagramOutlined,
   TwitterOutlined,
 } from "@ant-design/icons";
+
 const FooterCustom = () => {
+  
   const listMenuCompany = [
     {
       name: "About",

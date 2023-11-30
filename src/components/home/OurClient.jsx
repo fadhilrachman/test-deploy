@@ -5,6 +5,7 @@ import Marquee from "react-fast-marquee";
 import TittleCustom from "../shared/TittleCustom";
 
 export default function OurClient() {
+  
   const clientLogos = [
     "/img/clientLogo/aws.png",
     "/img/clientLogo/daofab.png",
@@ -14,6 +15,7 @@ export default function OurClient() {
     "/img/clientLogo/watiga.png",
     "/img/clientLogo/watigatrust.png",
   ];
+
   return (
     <section className="  space-y-12 py-12">
       <TittleCustom

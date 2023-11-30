@@ -1,3 +1,6 @@
+import Contact from "@/components/contact/Contact";
+import FooterCustom from "@/components/shared/FooterCustom";
+import NavbarCustom from "@/components/shared/NavbarCustom";
 import React from "react";
 
 export const metadata = {
@@ -6,5 +9,11 @@ export const metadata = {
 };
 
 export default function ContactPage() {
-  return <div className="mt-[84px]">ContactPage</div>;
+  return (
+    <>
+      <NavbarCustom />
+      <Contact />
+      <FooterCustom />
+    </>
+  );
 }
