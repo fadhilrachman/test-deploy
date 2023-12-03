@@ -5,7 +5,6 @@ import Marquee from "react-fast-marquee";
 import TittleCustom from "../shared/TittleCustom";
 
 export default function OurClient() {
-  
   const clientLogos = [
     "/img/clientLogo/aws.png",
     "/img/clientLogo/daofab.png",
@@ -17,11 +16,11 @@ export default function OurClient() {
   ];
 
   return (
-    <section className="  space-y-12 py-12">
+    <section className="space-x-6  py-6 md:py-12 md:space-y-12">
       <TittleCustom
         title="OUR CLIENTS"
         subTitle="See who’s our partners"
-        className="text-center px-[120px]"
+        className="text-left md:text-center px-6 md:px-[120px] "
       />
       <Marquee className="flex justify-between " autoFill pauseOnHover>
         {clientLogos.map((res, i) => (
@@ -29,7 +28,7 @@ export default function OurClient() {
             src={res}
             alt="client"
             key={i}
-            className="mx-6 object-contain max-h-[120px] max-w-[300px] bg-red-300"
+            className="mx-6 object-contain h-12 md:h-max max-h-[120px] max-w-[300px] bg-red-300"
           />
         ))}
       </Marquee>

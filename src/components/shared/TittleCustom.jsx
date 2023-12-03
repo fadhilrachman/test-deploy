@@ -8,10 +8,10 @@ const TittleCustom = ({
   subTittleClassName,
 }) => {
   return (
-    <div className={`${className} space-y-12`}>
+    <div className={`${className} space-y-6 md:space-y-12`}>
       {title && (
         <p
-          className={`${tittleClassName} text-neutral-400 font-bold text-base leading-normal`}
+          className={`${tittleClassName} text-neutral-400 font-bold text-xs md:text-base leading-normal`}
         >
           {title}
         </p>
@@ -19,7 +19,7 @@ const TittleCustom = ({
 
       {subTitle && (
         <div
-          className={`${subTittleClassName} text-main font-secondary   text-4xl font-bold `}
+          className={`${subTittleClassName} text-main font-secondary  text-2xl md:text-4xl font-bold `}
         >
           {subTitle}
         </div>
