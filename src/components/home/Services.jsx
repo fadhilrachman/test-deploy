@@ -12,7 +12,7 @@ const IconSteps = ({ children }) => (
   </div>
 );
 
-const Label = ({ children, isActive = false }) => {
+const LabelTabs = ({ children, isActive = false }) => {
   return (
     <div
       className={` h-11  px-4 py-3  ${
@@ -62,7 +62,7 @@ const Content = ({ tittle, description, stepsItem }) => {
   return (
     <div>
       <h3 className="text-2xl font-bold font-secondary">{tittle}</h3>
-      <div className="py-6 text-neutral-700 max-w-[720px] text-base font-medium">
+      <div className="py-6 text-neutral-700 max-w-[720px] text-sm md:text-base font-medium">
         {description}
       </div>
       <Collapse
@@ -82,9 +82,9 @@ const Services = () => {
     {
       key: "1",
 
-      label: <Label isActive={key == "1"}>SALE & PURCHASE</Label>,
+      label: <LabelTabs isActive={key == "1"}>SALE & PURCHASE</LabelTabs>,
       children: (
-        <div className="flex justify-between">
+        <div className="flex flex-col md:flex-row justify-between">
           <Content
             tittle={"Sale and purchase of assets / shares"}
             description={
@@ -184,9 +184,9 @@ const Services = () => {
     },
     {
       key: "2",
-      label: <Label isActive={key == "2"}>PAYMASTER ACCOUNT</Label>,
+      label: <LabelTabs isActive={key == "2"}>PAYMASTER ACCOUNT</LabelTabs>,
       children: (
-        <div className="flex justify-between">
+        <div className="flex flex-col md:flex-row justify-between">
           <Content
             tittle={"PAYMASTER ACCOUNT"}
             description={
@@ -289,9 +289,9 @@ const Services = () => {
     },
     {
       key: "3",
-      label: <Label isActive={key == "3"}>DOCUMENT</Label>,
+      label: <LabelTabs isActive={key == "3"}>DOCUMENT</LabelTabs>,
       children: (
-        <div className="flex justify-between">
+        <div className="flex flex-col md:flex-row  md:justify-between">
           <Content
             tittle={"DOCUMENT ESCROW"}
             description={
@@ -388,31 +388,29 @@ const Services = () => {
     },
     {
       key: "4",
-      label: <Label isActive={key == "4"}>SOURCE CODE</Label>,
+      label: <LabelTabs isActive={key == "4"}>SOURCE CODE</LabelTabs>,
       children: <Content tittle={"Source Code Escrow"} />,
     },
     {
       key: "5",
-      label: <Label isActive={key == "5"}> BESPOKE AGREEMENT</Label>,
+      label: <LabelTabs isActive={key == "5"}> BESPOKE AGREEMENT</LabelTabs>,
       children: <Content tittle={"Bespoke Escrow Agreement"} />,
     },
   ];
 
   return (
-    <section className="py-12">
-      <div className="px-[120px]">
-        <TittleCustom title={"WHAT IS OUR SERVICES?"} className={"mb-10"} />
-        {/* <Tabs. */}
-        <Tabs
-          onChange={(key) => {
-            setKey(key);
-          }}
-          defaultActiveKey="1"
-          animated={{ inkBar: true, tabPane: false, tabPaneMotion: true }}
-          items={items}
-          tabBarStyle={{ border: "none", textDecoration: "none" }}
-        />
-      </div>
+    <section className="py-12 px-6 md:px-[120px]">
+      <TittleCustom title={"WHAT IS OUR SERVICES?"} className={"mb-10"} />
+      {/* <Tabs. */}
+      <Tabs
+        onChange={(key) => {
+          setKey(key);
+        }}
+        defaultActiveKey="1"
+        animated={{ inkBar: true, tabPane: false, tabPaneMotion: true }}
+        items={items}
+        tabBarStyle={{ border: "none", textDecoration: "none" }}
+      />
     </section>
   );
 };

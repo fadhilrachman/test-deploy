@@ -7,7 +7,7 @@ import { CiCirclePlus } from "react-icons/ci";
 
 const Label = ({ children }) => {
   return (
-    <p className="text-2xl text-black font-bold mb-5 font-secondary  ml-1 ">
+    <p className="text-base  text-black font-bold   font-secondary  ml-1 mt-1 md:mb-5 md:mt-0 md:text-2xl">
       {children}
     </p>
   );
@@ -15,7 +15,7 @@ const Label = ({ children }) => {
 
 const Description = ({ children, className }) => (
   <div
-    className={`${className} space-y-10 mb-5 ml-14 -mt-5  text-base font-medium`}
+    className={`${className} space-y-10 mb-5 ml-10 md:ml-14 md:-mt-5  text-base font-medium`}
   >
     {children}
   </div>
@@ -26,9 +26,9 @@ const FAQ = () => {
     return (
       <div className="mt-3">
         {isActive ? (
-          <CiCirclePlus className="text-4xl rotate-45" />
+          <CiCirclePlus className="text-[27px] md:text-4xl  rotate-45" />
         ) : (
-          <CiCirclePlus className="text-4xl" />
+          <CiCirclePlus className="text-[27px] md:text-4xl " />
         )}
       </div>
     );
@@ -130,32 +130,28 @@ const FAQ = () => {
     },
   ];
   return (
-    <section className="py-12">
-      <div className="px-[120px]">
-        <TittleCustom
-          title={"FREQUENTLY ASKED QUESTION"}
-          subTitle={
-            <>
-              Have a question?{" "}
-              <span className="underline font-secondary">
-                Here’s our answer
-              </span>
-            </>
-          }
-          className={"mb-12"}
-          // color="gray"
-        />
-        {/* <TittleCustom className={"my-12 font-bold"} fontSize={"xl"}>
+    <section className="p-4 md:py-12 md:px-[120px]">
+      <TittleCustom
+        title={"FREQUENTLY ASKED QUESTION"}
+        subTitle={
+          <>
+            Have a question?{" "}
+            <span className="underline font-secondary">Here’s our answer</span>
+          </>
+        }
+        className={"mb-12"}
+        // color="gray"
+      />
+      {/* <TittleCustom className={"my-12 font-bold"} fontSize={"xl"}>
          </span>
         </TittleCustom> */}
-        <Collapse
-          bordered={false}
-          ghost
-          items={items}
-          style={{ marginLeft: -20 }}
-          expandIcon={customExpandIcon}
-        />
-      </div>
+      <Collapse
+        bordered={false}
+        ghost
+        items={items}
+        style={{ marginLeft: -20 }}
+        expandIcon={customExpandIcon}
+      />
     </section>
   );
 };
