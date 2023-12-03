@@ -1,0 +1,12 @@
+version: '3.3'
+services:
+    sonar-scanner-cli:
+        environment:
+            - 'SONAR_HOST_URL=https://sonarqube.arnatech.id/'
+            - SONAR_SCANNER_OPTS=-Dsonar.projectKey=escrow-fe
+            - SONAR_TOKEN=squ_b412bb962b8c54f3a2b1008bfe2bcff11da0f526
+        volumes:
+            - '/opt/jenkins_compose/jenkins_configuration/workspace/staging/escrow-fe/escrow-fe:/usr/src'
+        image: sonarsource/sonar-scanner-cli
+
+# docker run --rm -e SONAR_HOST_URL="https://sonarqube.nikici.com/" -e SONAR_SCANNER_OPTS="-Dsonar.projectKey=com.kayaroll.be" -e SONAR_TOKEN="69d3977a9af567f93bc6eaf4d1284e524a5ddef1" -v "${YOUR_REPO}:/usr/src" sonarsource/sonar-scanner-cli
