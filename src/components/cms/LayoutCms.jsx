@@ -2,8 +2,11 @@
 
 import React, { useEffect, useState } from "react";
 import { UserOutlined, LogoutOutlined } from "@ant-design/icons";
-import { Layout, Menu, theme, Dropdown, Avatar } from "antd";
+import { Layout, Menu, theme, Dropdown, Avatar, Badge } from "antd";
 import SideBarCustom from "./SideBarCustom";
+import { FaChevronDown } from "react-icons/fa6";
+import { FaBell } from "react-icons/fa";
+
 const { Header, Content, Footer, Sider } = Layout;
 
 const LayoutCms = ({ children }) => {
@@ -54,37 +57,44 @@ const LayoutCms = ({ children }) => {
           }}
         >
           <h5 className="mb-0 text-white">{""}</h5>
-          <Dropdown
-            menu={{
-              items: itemsMenu,
-            }}
-            className="z-100"
-          >
-            <div className="flex items-center">
-              <p className="mb-0 name text-neutral-500 mr-3 pointer">
-                {/* {localStorage.getItem("namePesantren")} */}Admin 123
-              </p>
-              <div className="profilepic flex justify-center items-center">
-                {false ? (
-                  <img
-                    src={"imageLink"}
-                    alt="store-image"
-                    className="img-fluid"
-                  />
-                ) : (
-                  <Avatar
-                    size={40}
-                    icon={<UserOutlined />}
-                    // shape="square"
-                    className="bg-[#3B5FE2] flex items-center justify-center pointer"
-                  />
-                )}
+          <div className="flex items-center space-x-6">
+            {/* // bell  */}
+            <Badge size="small" count={5} className="cursor-pointer">
+              <FaBell size={24} />
+            </Badge>
+            <Dropdown
+              menu={{
+                items: itemsMenu,
+              }}
+              className="z-100"
+            >
+              <div className="space-x-2 flex items-center cursor-pointer">
+                <div className="profilepic flex justify-center items-center">
+                  {false ? (
+                    <img
+                      src={"imageLink"}
+                      alt="store-image"
+                      className="img-fluid"
+                    />
+                  ) : (
+                    <Avatar
+                      size={30}
+                      icon={<UserOutlined />}
+                      // shape="square"
+                      className="bg-[#3B5FE2] flex items-center justify-center pointer"
+                    />
+                  )}
+                </div>
+                <p className="mb-0 name text-neutral-700 text-base font-medium pointer">
+                  {/* {localStorage.getItem("namePesantren")} */}Admin 123
+                </p>
+                <FaChevronDown />
               </div>
-            </div>
-          </Dropdown>
+            </Dropdown>
+          </div>
         </Header>
-        <Content className="overflow-auto">
-          <div className="p-6">{children}</div>
+        <Content className="overflow-auto bg-white">
+          <div className="p-6 ">{children}</div>
         </Content>
       </Layout>
     </Layout>

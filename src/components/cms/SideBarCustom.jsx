@@ -61,11 +61,11 @@ export default function SideBarCustom() {
           // paddingTop: 60,
           // paddingBottom: 60,
         }}
-        width={270}
+        width={200}
         theme="light"
-        collapsible={true}
+        // collapsible={true}
         onCollapse={(value) => handleCollapsed(value)}
-        breakpoint="lg"
+        breakpoint="xl"
         collapsed={isCollapsedSideBar}
         // collapsedWidth={xs && collapsed ? "0" : "80"}
         onBreakpoint={(broken) => {

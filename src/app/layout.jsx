@@ -4,7 +4,7 @@ import "../styles/App.scss";
 
 const inter = Inter({
   subsets: ["latin"],
-  weight: ["300", "400"],
+  weight: ["300", "400", "700"],
   variable: "--font-inter",
 });
 const roboto = Roboto({

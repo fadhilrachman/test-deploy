@@ -9,6 +9,7 @@ export default function ButtonCustom({
   height,
   textClassName,
   disabled,
+  icon,
   ...props
 }) {
   if (type === "outline") {
@@ -32,13 +33,16 @@ export default function ButtonCustom({
         onClick={onClick}
         style={{ height: height || 36 }}
       >
-        <p
-          className={`text-sm font-semibold ${textClassName} ${
-            disabled && "text-disabled"
-          } `}
-        >
-          {title}
-        </p>
+        <div className="flex space-x-2 items-center">
+          {icon && <div className="text-white text-[20px]">{icon}</div>}
+          <p
+            className={`text-sm font-semibold text-white ${textClassName} ${
+              disabled && "text-disabled"
+            } `}
+          >
+            {title}
+          </p>
+        </div>
       </Button>
     );
   }
