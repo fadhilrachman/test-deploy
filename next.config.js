@@ -4,6 +4,9 @@ const path = require("path");
 // import './src/styles/App.scss'
 
 const nextConfig = {
+  images: {
+    // domains: ["escrow.staging.arnatech.id"],
+  },
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
   },

@@ -18,9 +18,9 @@ const LayoutCms = ({ children }) => {
   //     localStorage.clear();
   //     window.location.reload();
   //   };
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo({ top: 0, behavior: "smooth" });
+  // }, []);
 
   const itemsMenu = [
     // {

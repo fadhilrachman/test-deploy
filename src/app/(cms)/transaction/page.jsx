@@ -1,6 +1,7 @@
-import CustomTitleCms from "@/components/cms/CustomTitleCms";
-import LayoutCms from "@/components/cms/LayoutCms";
-import TabTransaction from "@/components/transaction/TabTransaction";
+"use client";
+import CustomTitleCms from "../../../components/cms/CustomTitleCms";
+import LayoutCms from "../../../components/cms/LayoutCms";
+import TabTransaction from "../../../components/transaction/TabTransaction";
 
 export default function TransactionPage() {
   return (

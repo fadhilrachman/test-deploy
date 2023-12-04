@@ -9,8 +9,9 @@ const { useBreakpoint } = Grid;
 
 import { useRouter } from "next/navigation";
 import { useSharedStores } from "@/stores/shared.stores";
+import { usePathname } from "next/navigation";
 
-const rootSubmenuKeys = ["sub1", "sub2", "sub3", "sub4"];
+// const rootSubmenuKeys = ["sub1", "sub2", "sub3", "sub4"];
 
 function getItem(label, key, icon, children, disabled) {
   return { label, key, icon, children, disabled };
@@ -24,28 +25,29 @@ const items = [
 
 export default function SideBarCustom() {
   const router = useRouter();
+  const pathname = usePathname();
+
   const { isCollapsedSideBar, handleCollapsed } = useSharedStores(
     (state) => state
   );
 
-  const setOpenKeys = (val) => {
-    console.log(val);
-  };
+  // const setOpenKeys = (val) => {
+  //   console.log(val);
+  // };
 
-  const onOpenChange = (keys) => {
-    const latestOpenKey = keys.find((key) => openKeys.indexOf(key) === -1);
-    if (rootSubmenuKeys.indexOf(latestOpenKey) === -1) {
-      setOpenKeys(keys);
-    } else {
-      setOpenKeys(latestOpenKey ? [latestOpenKey] : []);
-    }
-  };
+  // const onOpenChange = (keys) => {
+  //   const latestOpenKey = keys.find((key) => openKeys.indexOf(key) === -1);
+  //   if (rootSubmenuKeys.indexOf(latestOpenKey) === -1) {
+  //     setOpenKeys(keys);
+  //   } else {
+  //     setOpenKeys(latestOpenKey ? [latestOpenKey] : []);
+  //   }
+  // };
 
   const onClick = (e) => router.push(e.key);
 
-  const pathActive = `/${
-    location.pathname.split("/").filter((f) => f !== "")[0]
-  }`;
+  const pathActive = `/${pathname.split("/").filter((f) => f !== "")[0]}`;
+  console.log(pathActive);
 
   const { xs } = useBreakpoint();
 
