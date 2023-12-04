@@ -5,7 +5,9 @@ const path = require("path");
 
 const nextConfig = {
   images: {
-    domains: ["escrow.staging.arnatech.id"],
+    domains: ["escrow.staging.arnatech.id", "lh3.googleusercontent.com"],
+    disableStaticImages: true,
+    formats: ["image/avif", "image/webp"],
   },
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
