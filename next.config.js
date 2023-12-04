@@ -5,7 +5,7 @@ const path = require("path");
 
 const nextConfig = {
   images: {
-    // domains: ["escrow.staging.arnatech.id"],
+    domains: ["escrow.staging.arnatech.id"],
   },
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
