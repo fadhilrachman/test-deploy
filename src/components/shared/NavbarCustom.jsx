@@ -8,7 +8,7 @@ export default function NavbarCustom() {
   return (
     <div className="w-full h-[84px] px-[120px] flex items-center justify-between bg-main fixed top-0 left-0 right-0 z-50">
       <Link href={"/"}>
-        <Image src="/img/logo.svg" width={166} height={27} alt="logo" />
+        <Image src="/img/logo.svg" width={116} height={27} alt="logo" />
       </Link>
       <div className="flex items-center space-x-12">
         <div className="flex items-center space-x-12">
