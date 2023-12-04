@@ -53,7 +53,9 @@ export default function SellerList() {
         {filterTransaction.map((res, i) => (
           <div
             className={`h-11 px-4  cursor-pointer rounded-md border flex items-center justify-center capitalize ${
-              ActiveFilter === res ? activeClass : "border-zinc-200 bg-white "
+              ActiveFilter === res
+                ? activeClass
+                : "border-zinc-200 bg-white text-neutral-400"
             }`}
             key={i}
             onClick={() => setActiveFilter(res)}
