@@ -19,7 +19,7 @@ export default function OurClient() {
     <section className="py-6 md:py-12 md:space-y-12 overflow-hidden">
       <TittleCustom
         title="OUR CLIENTS"
-        subTitle="See who’s our partners"
+        subTitle={`See who’s our partners"`}
         className="text-left md:text-center px-6 md:px-[120px] "
       />
       <Marquee className="" autoFill pauseOnHover>

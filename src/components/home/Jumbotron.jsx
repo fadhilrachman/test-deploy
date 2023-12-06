@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function Jumbotron() {
   const { count, inc } = useHomeStores((state) => state);
   return (
-    <section className="h-screen w-full bg-main pt-[84px] pb-6 ">
+    <section className="h-screen w-full bg-main pt-[104px] md:pt-[84px] pb-6 ">
       <div className="flex  flex-col-reverse md:flex-row items-center justify-between px-6 md:px-[120px] h-full">
         <div className="max-w-[492px] mt-6 md:mt-0">
           <h1 className="text-yellow text-2xl  md:text-5xl font-bold font-secondary leading-loose md:leading-[72px] mb-2">

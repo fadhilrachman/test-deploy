@@ -399,7 +399,7 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-12 px-6 md:px-[120px]">
+    <section className="py-12 px-6 md:px-[120px]" id="services">
       <TittleCustom title={"WHAT IS OUR SERVICES?"} className={"mb-10"} />
       {/* <Tabs. */}
       <Tabs

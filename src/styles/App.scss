@@ -2,6 +2,7 @@
 @import "~tailwindcss/components";
 @import "~tailwindcss/utilities";
 @import "./variables.scss";
+@import "./howTo.scss";
 
 @import "./overide.scss";
 
@@ -23,4 +24,12 @@ h5 {
 }
 h6 {
   font-size: 18px;
+}
+
+// .ant-tabs-bar .ant-tabs-tab-active {
+//   border-bottom: none;
+// }
+
+.ant-tabs-bar .ant-tabs-tab.ant-tabs-tab-active {
+  border-bottom: none !important;
 }
