@@ -140,10 +140,12 @@ const Product = () => {
   ];
 
   return (
-    <section className=" gap-6  max-h-[1044px] bg-blue-950 p-4 md:py-[72px] md:px-[120px] xl:px-[240px] ">
-      {/* <Button onClick={pref} size="large" shape="circle">
-        <IoIosArrowBack className="w-full" />
-      </Button> */}
+    <section className=" gap-6 md:flex  max-h-[1044px] bg-blue-950 p-4 md:py-[72px] md:px-[120px] xl:px-[240px] ">
+      <div className="hidden md:block">
+        <Button onClick={pref} size="large" shape="circle">
+          <IoIosArrowBack className="w-full" />
+        </Button>
+      </div>
       <Carousel
         style={{ maxWidth: "816px" }}
         ref={ref}
@@ -165,14 +167,16 @@ const Product = () => {
           );
         })}
       </Carousel>
-      {/* <Button
-        onClick={next}
-        size="large"
-        // className="flex justify-center"
-        shape="circle"
-      >
-        <IoIosArrowForward className="w-full" />
-      </Button> */}
+      <div className="hidden md:block">
+        <Button
+          onClick={next}
+          size="large"
+          // className="flex justify-center"
+          shape="circle"
+        >
+          <IoIosArrowForward className="w-full" />
+        </Button>
+      </div>
     </section>
   );
 };
