@@ -3,6 +3,7 @@
 import { Tabs } from "antd";
 import React from "react";
 import SellerSection from "./SellerSection";
+import BuyerSection from "./BuyerSection";
 
 export default function TabTransaction() {
   const onChange = (key) => {
@@ -12,7 +13,7 @@ export default function TabTransaction() {
     {
       key: "1",
       label: "Buyer",
-      children: "Content of Tab Pane 1",
+      children: <BuyerSection />,
     },
     {
       key: "2",
@@ -20,5 +21,5 @@ export default function TabTransaction() {
       children: <SellerSection />,
     },
   ];
-  return <Tabs defaultActiveKey="2" items={items} onChange={onChange} />;
+  return <Tabs defaultActiveKey="1" items={items} onChange={onChange} />;
 }

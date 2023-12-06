@@ -58,6 +58,8 @@ const FooterCustom = () => {
         />
       </div>
 
+      <div></div>
+
       <div className="pt-12 flex justify-between flex-col md:flex-row space-y-6 md:space-y-0">
         <div className="flex justify-between w-full md:w-5/12 border-b border-neutral-50 pb-6 md:border-none">
           <div className="flex flex-col">

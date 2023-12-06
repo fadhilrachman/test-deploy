@@ -15,11 +15,11 @@ const IconSteps = ({ children }) => (
 const LabelTabs = ({ children, isActive = false }) => {
   return (
     <div
-      className={` h-11  px-4 py-3  ${
+      className={` h-7 md:h-11  px-3 md:px-4 py-1.5  md:py-3  ${
         isActive ? "bg-blue-950 text-white" : "text-neutral-400 bg-white "
       } rounded-[120px] justify-center items-start gap-2.5 inline-flex`}
     >
-      <div className=" text-[14px] ">{children}</div>
+      <div className=" text-xs md:text-sm  ">{children}</div>
     </div>
   );
 };
@@ -174,9 +174,10 @@ const Services = () => {
               },
             ]}
           />
+
           <img
             src="/img/clientLogo/purchase&sales.png"
-            className="w-[360px] h-[268.83px] mt-12 "
+            className="w-[360px] mx-auto h-[268.83px] mt-12 "
             alt="client"
           />
         </div>

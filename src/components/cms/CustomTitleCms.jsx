@@ -9,7 +9,8 @@ export default function CustomTitleCms({ title, handleAdd }) {
       {handleAdd && (
         <ButtonCustom
           title="Transaction"
-          className="bg-main"
+          textClassName="text-white"
+          className="bg-main text-white"
           icon={<IoIosAddCircle />}
           height={40}
         />

@@ -38,10 +38,19 @@ export default function NavbarCustom() {
               })}
             </div>
             <div className="flex space-x-4">
-              <Link href={"/auth"}>
-                <ButtonCustom title="SIGN IN" />
+              <Link href={"/login"}>
+                <ButtonCustom
+                  title="SIGN IN"
+                  className={"w-full text-blue-950"}
+                />
               </Link>
-              <ButtonCustom title="REGISTER" type="outline" className="" />
+              <Link href={"/register"}>
+                <ButtonCustom
+                  title="REGISTER"
+                  type="outline"
+                  className=",t-3"
+                />
+              </Link>
             </div>
           </div>
         </div>
@@ -71,14 +80,12 @@ export default function NavbarCustom() {
               </Link>
             );
           })}
-          <Link href={"/auth"}>
-            <ButtonCustom
-              title="SIGN IN"
-              type={""}
-              className={"w-full text-blue-950"}
-            />
+          <Link href={"/login"}>
+            <ButtonCustom title="SIGN IN" className={"w-full text-blue-950"} />
           </Link>
-          <ButtonCustom title="REGISTER" type="outline" className=",t-3" />
+          <Link href={"/register"}>
+            <ButtonCustom title="REGISTER" type="outline" className=",t-3" />
+          </Link>
         </div>
       )}
     </>
