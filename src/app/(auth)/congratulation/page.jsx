@@ -24,6 +24,7 @@ export default function CongratPage() {
         <ButtonCustom
           className="bg-main text-white w-[80%]"
           title="Sign In"
+          textClassName="text-white"
           height={40}
         />
       </div>

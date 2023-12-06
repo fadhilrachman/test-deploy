@@ -4,6 +4,7 @@ import ButtonCustom from "./ButtonCustom";
 import Link from "next/link";
 import { HiMenu } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
+
 export default function NavbarCustom() {
   const [open, setOpen] = useState(false);
   const listMenu = [
@@ -19,25 +20,29 @@ export default function NavbarCustom() {
   return (
     <>
       <div className="w-full h-[84px] px-[120px]  items-center justify-between bg-main fixed top-0 left-0 right-0 z-50 hidden md:flex">
-        <p className="text-white text-2xl font-bold">ESCROW</p>
+        <Link href={"/"}>
+          <img src="/img/logo.svg" width={116} height={27} alt="logo" />
+        </Link>
         <div className="flex items-center space-x-12">
           <div className="flex items-center space-x-12">
-            {listMenu.map((val) => {
-              return (
-                <Link
-                  href={val.path}
-                  className="text-white text-base font-bold"
-                >
-                  {val.name}
-                </Link>
-              );
-            })}
-          </div>
-          <div className="flex space-x-4">
-            <Link href={"/auth"}>
-              <ButtonCustom title="SIGN IN" />
-            </Link>
-            <ButtonCustom title="REGISTER" type="outline" className="" />
+            <div className="flex items-center space-x-12">
+              {listMenu.map((val) => {
+                return (
+                  <Link
+                    href={val.path}
+                    className="text-white text-base font-bold"
+                  >
+                    {val.name}
+                  </Link>
+                );
+              })}
+            </div>
+            <div className="flex space-x-4">
+              <Link href={"/auth"}>
+                <ButtonCustom title="SIGN IN" />
+              </Link>
+              <ButtonCustom title="REGISTER" type="outline" className="" />
+            </div>
           </div>
         </div>
       </div>
@@ -65,9 +70,9 @@ export default function NavbarCustom() {
             );
           })}
           <Link href={"/auth"}>
-            <ButtonCustom title="SIGN IN" className={"w-full"} />
+            <ButtonCustom title="SIGN IN" className={"w-full text-blue-950"} />
           </Link>
-          <ButtonCustom title="REGISTER" type="outline" className="" />
+          <ButtonCustom title="REGISTER" type="outline" className=",t-3" />
         </div>
       )}
     </>

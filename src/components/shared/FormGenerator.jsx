@@ -367,7 +367,7 @@ export default function FormGenerator({
                 name={res.name}
                 rules={res?.rules}
               >
-                <TextArea placeholder={res?.placeholder} rows={4} />
+                <TextArea placeholder={res?.placeholder} rows={3} />
               </Form.Item>
             );
           }

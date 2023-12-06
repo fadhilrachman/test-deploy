@@ -25,10 +25,6 @@ input[type="number"] {
   }
 }
 
-// input {
-//   width: 100% !important;
-// }
-
 .ant-form-item-label {
   padding-bottom: 2px !important;
   label {
@@ -44,4 +40,8 @@ input[type="number"] {
   .ant-switch-inner-unchecked & {
     background: #e3e3e3 !important;
   }
+}
+
+svg {
+  box-shadow: unset !important;
 }

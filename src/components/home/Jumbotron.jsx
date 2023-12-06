@@ -21,8 +21,8 @@ export default function Jumbotron() {
         </div>
         <div className="">
           <img
-            src="/img/jumboImage.png"
-            className="shadow-xl w-[588px] object-contain"
+            src="/img/jumboImage.svg"
+            className="w-[588px] object-contain shadow-2xl"
           />
         </div>
       </div>

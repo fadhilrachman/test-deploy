@@ -11,26 +11,26 @@ const FooterCustom = () => {
   const listMenuCompany = [
     {
       name: "About",
-      link: "/about",
+      link: "#about",
     },
     {
       name: "Insight",
-      link: "/insight",
+      link: "#insight",
     },
     {
       name: "Pricing",
-      link: "/pricing",
+      link: "#pricing",
     },
     {
       name: "Services",
-      link: "/services",
+      link: "#services",
     },
   ];
 
   const listMenuGetInTouch = [
     {
       name: "Contact",
-      link: "/about",
+      link: "/contact",
     },
     {
       name: "Privacy Policy",
@@ -38,39 +38,48 @@ const FooterCustom = () => {
     },
     {
       name: "Term Of Services",
-      link: "/pricing",
+      link: "#pricing",
     },
     {
       name: "Frequent Asked Question",
-      link: "/services",
+      link: "#FAQ",
     },
   ];
 
   return (
     <section className=" p-4 md:py-[72px] md:px-[120px] bg-main text-white">
-      <p className="text-white text-2xl font-bold border-b border-neutral-50 md:border-none pb-6 md:pb-0">
-        Escrow SG
-      </p>
+      <div className="border-b border-neutral-50 md:border-none pb-6 md:pb-0 w-full">
+        <img
+          src="/img/logo.svg"
+          width={116}
+          height={27}
+          alt="logo"
+          className=""
+        />
+      </div>
 
       <div className="pt-12 flex justify-between flex-col md:flex-row space-y-6 md:space-y-0">
         <div className="flex justify-between w-full md:w-5/12 border-b border-neutral-50 pb-6 md:border-none">
-          <div className="]">
+          <div className="flex flex-col">
             <p className=" font-bold ">Company</p>
             {listMenuCompany.map((val) => {
               return (
-                <p className="mt-4 text-base  text-neutral-50 cursor-pointer">
+                <a
+                  href={val.link}
+                  className="mt-4 text-base  text-neutral-50 cursor-pointer"
+                >
                   {val.name}
-                </p>
+                </a>
               );
             })}
           </div>
-          <div className="col-span-2">
+          <div className="col-span-2 flex flex-col">
             <p className=" font-bold ">Get In Touch</p>
             {listMenuGetInTouch.map((val) => {
               return (
-                <p className="mt-4 text-base  text-neutral-50 cursor-pointer">
+                <a href={val.link} className="mt-4 text-base  text-neutral-50 ">
                   {val.name}
-                </p>
+                </a>
               );
             })}
           </div>

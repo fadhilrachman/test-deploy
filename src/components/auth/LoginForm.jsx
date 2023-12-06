@@ -24,7 +24,7 @@ export default function LoginForm() {
       // localStorage.setItem("email", response.data.email);
       // localStorage.setItem("id", response.data._id);
       // route.push("/dashboard");
-      window.location.reload();
+      // window.location.reload();
     } catch (error) {
       console.log(error);
     }

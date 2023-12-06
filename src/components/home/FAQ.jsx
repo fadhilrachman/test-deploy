@@ -130,7 +130,7 @@ const FAQ = () => {
     },
   ];
   return (
-    <section className="p-4 md:py-12 md:px-[120px]">
+    <section className="p-4 md:py-12 md:px-[120px]" id="FAQ">
       <TittleCustom
         title={"FREQUENTLY ASKED QUESTION"}
         subTitle={

@@ -54,7 +54,7 @@ const HowTo = () => {
         subTitle={"Here’s a tutorial using ESCROW"}
       />
       <div className="mt-12   flex flex-col md:flex-row space-y-6 md:space-y-0 justify-between space-x-12">
-        <div className=" bg-white rounded-2xl p-6 max-h-[396px] overflow-y-hidden   border border-blue-950">
+        <div className=" bg-white rounded-2xl p-6 max-h-[396px] overflow-y-scroll scroll-hidden    border border-blue-950">
           <Steps
             current={current}
             onChange={onChange}

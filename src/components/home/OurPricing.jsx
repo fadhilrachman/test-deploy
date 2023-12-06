@@ -31,7 +31,10 @@ const Card = ({ tittle, price, list, className, classNamePrice }) => {
 
 const OurPricing = () => {
   return (
-    <section className="  min-h-[921px] p-6 py-[72px]  md:px-[120px]">
+    <section
+      id="pricing"
+      className="  min-h-[921px] p-6 py-[72px]  md:px-[120px]"
+    >
       <TittleCustom
         title={"OUR PRICING"}
         subTitle={"Choose what type of services you need"}
