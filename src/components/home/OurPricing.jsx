@@ -10,7 +10,7 @@ const Card = ({ tittle, price, list, className, classNamePrice }) => {
       </h3>
 
       <div
-        className={`${classNamePrice} py-1 border-b border-zinc-200 flex items-center justify-center text-5xl font-secondary font-bold`}
+        className={`${classNamePrice} py-1 border-b border-zinc-200 flex items-center justify-center text-4xl md:text-5xl font-secondary font-bold`}
       >
         {price}
       </div>
@@ -35,9 +35,9 @@ const OurPricing = () => {
       <TittleCustom
         title={"OUR PRICING"}
         subTitle={"Choose what type of services you need"}
-        className={"text-center"}
+        className={"text-left md:text-center"}
       />
-      <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <div className="mt-4 md:mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         <Card
           price="0.75%"
           tittle="Fiat"

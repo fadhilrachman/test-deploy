@@ -7,7 +7,7 @@ import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 const LabelTabs = ({ children, isActive = false }) => {
   return (
     <div
-      className={` " h-11  px-4 py-3  ${
+      className={` " h-8 md:h-11 px-3  md:px-4 py-1.5 md:py-3  ${
         isActive ? "text-blue-950 bg-white" : " bg-blue-950 text-white "
       } rounded-[120px] justify-center items-start text-sm font-semibold leading-tight`}
     >
@@ -19,15 +19,15 @@ const LabelTabs = ({ children, isActive = false }) => {
 // CAROUSEL
 const ContentCarousel = ({ tittle, subTittle, description, imageContent }) => {
   return (
-    <div>
+    <div className=" ">
       <div className="space-y-6 flex flex-col items-center mb-[72px]">
-        <h3 className="text-white text-4xl font-bold font-secondary">
+        <h3 className="text-white text-2xl text-center md:text-4xl font-bold font-secondary">
           {tittle}
         </h3>
-        <div className="text-center text-white text-base font-medium">
+        <div className="text-center w-full text-white text-sm md:text-base font-normal md:font-medium">
           {subTittle}
         </div>
-        <p className="  text-center text-white text-base font-normal">
+        <p className="  text-center text-white text-sm md:text-base font-normal">
           {description}
         </p>
       </div>
@@ -77,7 +77,7 @@ const Product = () => {
       key: "1",
       label: <LabelTabs isActive={key == "1"}>BUSINESS CASE</LabelTabs>,
       children: (
-        <div className="text-center text-white text-base font-normal">
+        <div className="text-center text-white text-sm md:text-base font-normal">
           In sale purchase escrow arrangement, ESCROW SG acts as an independent
           and neutral third party who holds the funds from the buyer as proof of
           commitment in the transaction. Once certain pre-agreed conditions are
@@ -109,42 +109,45 @@ const Product = () => {
         "For fiat escrow, simply transfer the escrow amount to our bank account.",
       description:
         "For (upcoming) cryptocurrency escrow, Escrow SG platform is integrated with WalletConnect which connects you with over 100 leading wallets. This ensures that you are able to transact with your existing wallets and provides more for you to choose from.",
-      // imageContent: (
-      //   <div className="grid grid-cols-4 gap-6">
-      //     {listImage.map((val) => {
-      //       return <img src={val} alt="product" className="rounded-full" />;
-      //     })}
-      //   </div>
-      // ),
-    },
-    {
-      tittle: "Use Case",
-      subTittle: (
-        <Tabs
-          onChange={(key) => {
-            setKey(key);
-          }}
-          defaultActiveKey="1"
-          animated={{ inkBar: true, tabPane: false, tabPaneMotion: true }}
-          items={itemTabs}
-          tabBarStyle={{
-            border: "none",
-            textDecoration: "none",
-            margin: "0 auto",
-          }}
-        />
+      imageContent: (
+        <div className="grid grid-cols-4 gap-6">
+          {listImage.map((val) => {
+            return <img src={val} alt="product" className="rounded-full" />;
+          })}
+        </div>
       ),
     },
+    // {
+    //   tittle: "Use Case",
+    //   subTittle: (
+    //     <Tabs
+    //       onChange={(key) => {
+    //         setKey(key);
+    //       }}
+    //       defaultActiveKey="1"
+    //       // className="bg-purple-300 w-[143px]"
+    //       animated={{ inkBar: true, tabPane: false, tabPaneMotion: true }}
+    //       items={itemTabs}
+    //       tabBarStyle={{
+    //         border: "none",
+    //         textDecoration: "none",
+    //         margin: "0 auto",
+    //         width: "300px",
+    //       }}
+    //     />
+    //   ),
+    // },
   ];
 
   return (
-    <section className=" gap-6 flex max-h-[1044px] bg-blue-950 p-1.5 md:py-[72px] md:px-[240px] ">
-      <Button onClick={pref} size="large" shape="circle">
+    <section className=" gap-6  max-h-[1044px] bg-blue-950 p-4 md:py-[72px] md:px-[120px] xl:px-[240px] ">
+      {/* <Button onClick={pref} size="large" shape="circle">
         <IoIosArrowBack className="w-full" />
-      </Button>
+      </Button> */}
       <Carousel
         style={{ maxWidth: "816px" }}
         ref={ref}
+        infinite
         afterChange={(e) => {
           console.log({ e });
         }}
@@ -162,14 +165,14 @@ const Product = () => {
           );
         })}
       </Carousel>
-      <Button
+      {/* <Button
         onClick={next}
         size="large"
         // className="flex justify-center"
         shape="circle"
       >
         <IoIosArrowForward className="w-full" />
-      </Button>
+      </Button> */}
     </section>
   );
 };
