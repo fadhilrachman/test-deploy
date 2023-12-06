@@ -9,7 +9,7 @@ const Tittle = ({ children, isActive = false }) => {
     <h3
       className={`${
         isActive ? "text-blue-950" : "text-zinc-200 "
-      } font-secondary font-bold text-2xl`}
+      } font-secondary font-bold text-base md:text-2xl`}
     >
       {children}
     </h3>
@@ -19,7 +19,7 @@ const Tittle = ({ children, isActive = false }) => {
 const IconSteps = ({ children, isActive = false }) => {
   return (
     <div
-      className={`w-9 h-9  ${
+      className={`w-6 h-6 md:w-9 md:h-9  ${
         isActive ? "bg-blue-950" : "bg-zinc-200"
       } text-white  rounded-[120px] flex justify-center items-center`}
     >
@@ -33,7 +33,7 @@ const Description = ({ children, isActive = false }) => {
     <div
       className={` ${
         isActive ? "text-neutral-700" : "text-zinc-200 "
-      }  text-base font-medium mt-4 transition-all duration-100 `}
+      }  text-sm md:text-base font-medium mt-4 transition-all duration-100 `}
     >
       {children}
     </div>
@@ -63,7 +63,7 @@ const HowTo = () => {
             className="font-secondary"
             items={[
               {
-                style: { paddingBottom: "48px" },
+                // style: { paddingBottom: "48px" },
                 icon: <IconSteps isActive>1</IconSteps>,
                 title: <Tittle isActive>Signing up on ESCROW SG</Tittle>,
                 description: (
@@ -72,11 +72,11 @@ const HowTo = () => {
                     undergo a quick KYC and AML check and you are good to go.
                   </Description>
                 ),
+                className: "pb-4 md:pb-12",
                 status: "wait",
               },
               {
-                style: { paddingBottom: "48px" },
-
+                className: "pb-4 md:pb-12",
                 icon: <IconSteps isActive={current >= 1}>2</IconSteps>,
                 title: (
                   <Tittle isActive={current >= 1}>
@@ -95,7 +95,7 @@ const HowTo = () => {
                 ),
               },
               {
-                style: { paddingBottom: "48px" },
+                className: "pb-4 md:pb-12",
 
                 icon: <IconSteps isActive={current >= 2}>3</IconSteps>,
                 title: (
@@ -113,7 +113,7 @@ const HowTo = () => {
                 ),
               },
               {
-                style: { paddingBottom: "48px" },
+                className: "pb-4 md:pb-12",
 
                 icon: <IconSteps isActive={current >= 3}>4</IconSteps>,
                 title: (

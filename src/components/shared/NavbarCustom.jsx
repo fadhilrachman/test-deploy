@@ -47,7 +47,9 @@ export default function NavbarCustom() {
         </div>
       </div>
       <div className="w-full fixed top-0 left-0 right-0 z-50  bg-main p-6 border-b border-neutral-50  items-center flex justify-between  md:hidden">
-        <p className="text-white text-2xl font-bold">ESCROW</p>
+        <Link href={"/"}>
+          <img src="/img/logo.svg" width={116} height={27} alt="logo" />
+        </Link>
         {open ? (
           <IoClose
             className="text-white w-6 h-6 cursor-pointer transition-all "
@@ -70,7 +72,11 @@ export default function NavbarCustom() {
             );
           })}
           <Link href={"/auth"}>
-            <ButtonCustom title="SIGN IN" className={"w-full text-blue-950"} />
+            <ButtonCustom
+              title="SIGN IN"
+              type={""}
+              className={"w-full text-blue-950"}
+            />
           </Link>
           <ButtonCustom title="REGISTER" type="outline" className=",t-3" />
         </div>
