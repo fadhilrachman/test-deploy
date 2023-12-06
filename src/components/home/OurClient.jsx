@@ -16,7 +16,7 @@ export default function OurClient() {
   ];
 
   return (
-    <section className="space-x-6  py-6 md:py-12 md:space-y-12">
+    <section className="space-y-6  py-6 md:py-12 md:space-y-12">
       <TittleCustom
         title="OUR CLIENTS"
         subTitle="See who’s our partners"

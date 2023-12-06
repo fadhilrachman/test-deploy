@@ -54,7 +54,7 @@ const ContactForm = () => {
           form="dynamicForm"
           htmlType="submit"
           title="Sent"
-          className="bg-main w-max mt-6 rounded-md"
+          className="bg-main w-full md:w-max mt-6 rounded-md"
           textClassName="text-white"
           height={40}
         />

@@ -36,7 +36,7 @@ export default function ButtonCustom({
         <div className="flex space-x-2 items-center justify-center">
           {icon && <div className="text-white text-[20px]">{icon}</div>}
           <p
-            className={`text-sm font-semibold text-white ${textClassName} ${
+            className={`text-sm font-semibold text- ${textClassName} ${
               disabled && "text-disabled"
             } `}
           >

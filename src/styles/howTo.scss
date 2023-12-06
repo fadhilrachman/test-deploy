@@ -1,0 +1,7 @@
+.scroll-hidden::-webkit-scrollbar {
+  width: 12px; /* Sesuaikan lebar scrollbar sesuai kebutuhan */
+}
+
+.scroll-hidden::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0);
+}
